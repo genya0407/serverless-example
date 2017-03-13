@@ -22,12 +22,12 @@ provider:
   runtime: python2.7
   memorySize: 128
 
-plugins:
-  - serverless-python-requirements
+#plugins:
+#  - serverless-python-requirements
 
-custom:
-  pythonRequirements:
-    dockerizePip: true
+#custom:
+#  pythonRequirements:
+#    dockerizePip: true
 
 # you can overwrite defaults here
 #  stage: dev
@@ -64,7 +64,7 @@ custom:
 
 functions:
   hello:
-    handler: handler.create_drive
+    handler: handler.hello
     events:
       - http:
           path: drive

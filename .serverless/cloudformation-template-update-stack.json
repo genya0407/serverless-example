@@ -106,10 +106,10 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/aws-python/dev/1489344372542-2017-03-12T18:46:12.542Z/aws-python.zip"
+          "S3Key": "serverless/aws-python/dev/1489379817316-2017-03-13T04:36:57.316Z/aws-python.zip"
         },
         "FunctionName": "aws-python-dev-hello",
-        "Handler": "handler.create_drive",
+        "Handler": "handler.hello",
         "MemorySize": 128,
         "Role": {
           "Fn::GetAtt": [
@@ -118,25 +118,20 @@
           ]
         },
         "Runtime": "python2.7",
-        "Timeout": 6,
-        "Environment": {
-          "Variables": {
-            "hoge": "fuga"
-          }
-        }
+        "Timeout": 6
       },
       "DependsOn": [
         "IamRoleLambdaExecution"
       ]
     },
-    "HelloLambdaVersionkBVqvUjWEnt9qyuTYi16Dsrz2Jxlp1ncVGio48aYqM": {
+    "HelloLambdaVersionstbspnvUjrXJi6GxBqEEC0EuiLJVNjoh0P58cObM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "kBVqvUjWEnt9qyuTYi16Dsrz2Jxlp1ncVGio4/8aYqM="
+        "CodeSha256": "stbspnvUjrXJi6Gx++BqEEC0+EuiLJVNjoh0P58cObM="
       }
     },
     "ApiGatewayRestApi": {
@@ -198,7 +193,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1489344372577": {
+    "ApiGatewayDeployment1489379817332": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -253,7 +248,7 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionkBVqvUjWEnt9qyuTYi16Dsrz2Jxlp1ncVGio48aYqM"
+        "Ref": "HelloLambdaVersionstbspnvUjrXJi6GxBqEEC0EuiLJVNjoh0P58cObM"
       }
     },
     "ServiceEndpoint": {
